@@ -27,7 +27,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    int goal = [[NSUserDefaults standardUserDefaults] integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%d", goal];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(goalChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
+}
+
+-(void)goalChanged:(NSNotification *)notification {
+    NSUserDefaults *defaults = (NSUserDefaults *)[notification object];
+    int goal = [defaults integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%d", goal];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +63,10 @@
             
             //update the label
             self.totalLabel.text = [NSString stringWithFormat:@"%d", self.totalAmount];
+            
+            if(self.totalAmount> self.goalLabel.text.intValue) {
+                NSLog(@"You reached your goal");
+            }
             
             //clear input
             self.amountTF.text = @"";

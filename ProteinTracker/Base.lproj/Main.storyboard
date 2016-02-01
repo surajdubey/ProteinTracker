@@ -63,7 +63,7 @@
                                 <animations/>
                                 <state key="normal" title="History"/>
                                 <connections>
-                                    <segue destination="jG6-pb-eOS" kind="push" identifier="showHistory" id="7nH-Fe-ddW"/>
+                                    <segue destination="jG6-pb-eOS" kind="show" identifier="showHistory" id="7nH-Fe-ddW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gk-bB-aZH">
