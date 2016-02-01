@@ -14,9 +14,20 @@
 
 @implementation HistoryViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSMutableString *historyString = [[NSMutableString alloc] init];
+    
+    NSLog(@"View Loaded");
+    for(NSNumber *number in history)
+    {
+        NSLog([number stringValue]);
+        [historyString appendFormat:@"%@\n", number];
+    }
+    
+    self.historyLabel.text = historyString;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +45,9 @@
 }
 */
 
+-(void)setHistory:(NSMutableArray *)h {
+    //assign result from previous page
+    history = h;
+    
+}
 @end

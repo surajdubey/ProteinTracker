@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HistoryViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController {
+    NSMutableArray *amountHistory;
+}
 
 @property (strong, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) IBOutlet UILabel *goalLabel;

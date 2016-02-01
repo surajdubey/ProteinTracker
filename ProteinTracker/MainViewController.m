@@ -14,6 +14,16 @@
 
 @implementation MainViewController
 
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    if(self) {
+        amountHistory = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -44,6 +54,8 @@
             
             //clear input
             self.amountTF.text = @"";
+            
+            [amountHistory addObject:[NSNumber numberWithInt:amountText.intValue]];
         }
         else {
             NSLog(@"This is not number");
@@ -72,5 +84,15 @@
 
 -(void)unwindToMain:(UIStoryboardSegue *)segue {
 
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showHistory"])
+    {
+        NSLog([NSString stringWithFormat:@"%d", [amountHistory count]]);
+        HistoryViewController *controller = (HistoryViewController *)segue.destinationViewController;
+        
+        [controller setHistory:amountHistory];
+    }
 }
 @end

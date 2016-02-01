@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UIViewController {
+    NSMutableArray *history;
+}
+
+@property (strong, nonatomic) IBOutlet UILabel *historyLabel;
+
+-(void) setHistory:(NSMutableArray *)h;
 
 @end
