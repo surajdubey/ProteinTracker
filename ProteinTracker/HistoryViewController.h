@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HistoryViewController.h
 //  ProteinTracker
 //
 //  Created by ServesyOfficial on 01/02/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HistoryViewController : UIViewController
 
 @end
-
