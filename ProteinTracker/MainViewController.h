@@ -17,6 +17,7 @@
 
 - (IBAction)addButton:(id)sender;
 
+-(IBAction)unwindToMain:(UIStoryboardSegue  *)segue;
 @property int totalAmount;
 @end
 

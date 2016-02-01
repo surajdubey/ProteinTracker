@@ -61,6 +61,9 @@
                                 <rect key="frame" x="135" y="430" width="50" height="30"/>
                                 <animations/>
                                 <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="jG6-pb-eOS" kind="show" id="7nH-Fe-ddW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dco-ln-gxx">
                                 <rect key="frame" x="145" y="204" width="30" height="30"/>
@@ -108,10 +111,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-rt-fBb">
-                                <rect key="frame" x="142" y="424" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr8-th-A7d">
+                                <rect key="frame" x="137" y="413" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Done"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="31h-Ug-fMu" kind="unwind" unwindAction="unwindToMain:" id="Pbf-av-2pg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -120,6 +126,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNC-g7-45t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="31h-Ug-fMu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="631" y="293"/>
         </scene>
